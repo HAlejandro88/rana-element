@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/HAlejandro88/arduino-component.svg?branch=master)](https://travis-ci.org/HAlejandro88/rana-element)
+
 # <rana-element>
 
 > This is an example file with default selections.

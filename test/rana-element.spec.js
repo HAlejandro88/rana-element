@@ -6,6 +6,6 @@ import "../rana-element.js";
 describe("Suite cases", () => {
   it("Case default", async () => {
     const _element = await fixture("<rana-element></rana-element>");
-    assert.strictEqual(_element.hello, "Hello World!");
+    assert.strictEqual(_element.toMove, 0);
   });
 });
