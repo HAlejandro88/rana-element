@@ -7,28 +7,13 @@ class RanaElement extends LitElement {
       toMove :{type: Number}
     };
   }
-set toMove(val){
-    let oldVal = this._toMove;
-    this._toMove = ()=>{
-      let salto = this.line.length-1;
-      let position = this.line.indexOf('frog');
-      console.log(salto)
-      for(let i=0; i< this.toMove; i++){
 
-        this.line[position]=null;
-        (position < salto) ? position++ :position= 0;
-      }
-      this.line[position]="frog";
-      console.log(this.line);
-      this.set("indexfrog",position);
-    }
-    this.requestUpdate('toMove',oldVal)
-}
-get toMove(){return this._toMove}
+
   constructor() {
     super();
     this.line = ['frog',null,null,null,null];
-    this.toMove = 2;
+    this.toMove = 0;
+    this.move()
   }
 
   static get styles() {
@@ -36,6 +21,7 @@ get toMove(){return this._toMove}
     .container{
        width:100%;
        height:100vh;
+       display: flex;
      }
      .box{
        height:50px;
@@ -48,14 +34,28 @@ get toMove(){return this._toMove}
   render() {
     return html`
       <div class="container">
-        ${this.line.map(box=>html`<div class="box">${box}</div>`)}      
+        ${this.line.map(box=>html`<div class="box">${box}</div>`)}     
       </div>
-      <div>
-        <button @click="move">hola</button> 
-      </div>
+      
+      
+      
      
     `;
   }
+  move(){
+    let salto = this.line.length-1;
+    let position = this.line.indexOf('frog');
+    console.log(salto)
+    for(let i=0; i< this.toMove; i++){
+
+      this.line[position]=null;
+      (position < salto) ? position++ :position= 0;
+    }
+    this.line[position]="frog";
+    console.log(this.line);
+    
+  }
+  
 
 }
 
