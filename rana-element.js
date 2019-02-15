@@ -34,7 +34,8 @@ class RanaElement extends LitElement {
   render() {
     return html`
       <div class="container">
-        ${this.line.map(box=>html`<div class="box">${box}</div>`)}     
+        ${this.line.map(box=>html`<div class="box">${box}</div>`)} 
+        <input type="text" @keyup="${this.bindNumber}">    
       </div>
       
       
@@ -42,6 +43,15 @@ class RanaElement extends LitElement {
      
     `;
   }
+
+  bindNumber(event){
+    let number=event.target.value;
+    console.log(number );
+    
+    this.toMove=number;
+    this.move();
+  }
+
   move(){
     let salto = this.line.length-1;
     let position = this.line.indexOf('frog');
