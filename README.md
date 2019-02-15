@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/HAlejandro88/arduino-component.svg?branch=master)](https://travis-ci.org/HAlejandro88/rana-element)
+[![Build Status](https://travis-ci.org/HAlejandro88/rana-element.svg?branch=master)](https://travis-ci.org/HAlejandro88/rana-element)
 
 # <rana-element>
 
