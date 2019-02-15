@@ -28,6 +28,10 @@ class RanaElement extends LitElement {
        width:50px;
        border:1px solid black;
      }
+     #movimiento{
+       width:50px;m   
+       height:50px;
+     }
     `;
   }
 
@@ -35,7 +39,7 @@ class RanaElement extends LitElement {
     return html`
       <div class="container">
         ${this.line.map(box=>html`<div class="box">${box}</div>`)} 
-        <input type="text" @keyup="${this.bindNumber}">    
+        <input type="text" @keyup="${this.bindNumber}" id="movimiento">    
       </div>
       
       
